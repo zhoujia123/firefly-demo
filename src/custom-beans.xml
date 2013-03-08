@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://code.google.com/p/firefly/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://code.google.com/p/firefly/beans http://firefly.googlecode.com/files/beans.xsd">
+
+
+    <bean id="apple" class="com.firefly.demo.domain.Food">
+        <property name="name" value="apple"/>
+        <property name="price" value="5.3f"/>
+    </bean>
+    <bean id="orange" class="com.firefly.demo.domain.Food">
+        <property name="name" value="orange"/>
+        <property name="price" value="6.0f"/>
+    </bean>
+    <bean id="strawberry" class="com.firefly.demo.domain.Food">
+        <property name="name" value="strawberry"/>
+        <property name="price" value="10.00f"/>
+    </bean>
+
+    <bean id="foodRepository" class="com.firefly.demo.repository.FoodRepository">
+        <property name="food">
+            <list>
+                <ref bean="apple"/>
+                <ref bean="orange"/>
+                <ref bean="strawberry"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
