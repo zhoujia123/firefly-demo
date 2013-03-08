@@ -15,7 +15,7 @@ public class _book extends AbstractView {
 		out.write(_TEXT_0);
 		out.write(objNav.getValue(model ,"book.id").getBytes("UTF-8"));
 		out.write(_TEXT_1);
-		out.write(objNav.getValue(model ,"book.name").getBytes("UTF-8"));
+		out.write(objNav.getValue(model ,"book.title").getBytes("UTF-8"));
 		out.write(_TEXT_2);
 		out.write(objNav.getValue(model ,"book.author").getBytes("UTF-8"));
 		out.write(_TEXT_3);

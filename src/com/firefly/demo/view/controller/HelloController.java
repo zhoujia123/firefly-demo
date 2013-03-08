@@ -26,6 +26,7 @@ public class HelloController {
 
     Log log = LogFactory.getInstance().getLog("demo-log");
 
+    //firefly自带的容器目前没有jsp编译器,所以不扶持jsp
     @RequestMapping(value = "/hello")
     public View index(HttpServletRequest request) {
         request.setAttribute("hello", "你好 firefly!");

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>template demo for</title>
+</head>
+<body>
+<div>
+    <!-- #for i : ${intArr} -->
+    ${i} &nbsp;&nbsp;
+    <!-- #end -->
+</div>
+
+<hr/>
+<h3>'$'{len(users)}是一个函数调用，表示打印users对象的长度</h3>
+<h4>其中'$'{u_index}是获取循环当前下标的自增变量</h4>
+<div>
+    <div>users的size为:${len(users)}</div> <hr/>
+    <table style="table-layout: fixed;border: 1px">
+        <thead style="text-align: center;">
+        <tr><th>index</th><th>name</th><th>name_len</th><th>age</th></tr>
+        </thead>
+        <tbody>
+        <!-- #for u : ${users} -->
+        <tr><td>${u_index}</td><td>${u.name}</td><td>${len(u.name)}</td><td>${u.age}</td></tr>
+        <!-- #end -->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

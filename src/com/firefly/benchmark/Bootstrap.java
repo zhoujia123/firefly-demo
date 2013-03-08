@@ -5,6 +5,8 @@ import java.io.File;
 import com.firefly.mvc.web.servlet.SystemHtmlPage;
 import com.firefly.server.ServerBootstrap;
 import com.firefly.server.http.Config;
+import com.firefly.template.FunctionRegistry;
+import com.firefly.demo.view.util.FunctionUtil;
 
 public class Bootstrap {
 
@@ -22,6 +24,9 @@ public class Bootstrap {
 //	}
 
     public static void main(String[] args) throws Throwable {
+
+        FunctionUtil.RegistFunction();
+
         ServerBootstrap.start("firefly.xml");
     }
 

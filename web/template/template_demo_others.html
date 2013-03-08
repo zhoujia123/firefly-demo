@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- #include /common/head.html?title=templateDemoOthers -->
+</head>
+<body>
+<h2>[eval,include, set, switch, case] demo</h2>
+
+<h3>include后面的URL要以/开头</h3>
+<!-- #include /common/top.html -->
+<!-- #include /common/top.html?title=thisIsOnePage -->
+
+<hr/>
+<h3>eval用来打印一个求值表达式</h3>
+<div><!-- #eval 3.0 + 3 * 5.0 / 2.0 --></div>
+
+<hr/>
+<h3>switch 语句的使用</h3>
+<div>
+    <!-- #switch ${stage} -->
+    <!-- #case 1 -->
+    stage1
+    <!-- #case 2 -->
+    stage2
+    <!-- #default -->
+    stage-default
+    <!-- #end -->
+</div>
+
+<hr/>
+<h3>set可以把一组键值对保存到model中</h3>
+<!-- #set msg=welcom&price=4.5&testName=${name} -->
+<div>
+    ${msg}&nbsp;&nbsp;${testName}
+</div>
+<div>
+    apple's price: ${price}
+</div>
+
+
+</body>
+</html>

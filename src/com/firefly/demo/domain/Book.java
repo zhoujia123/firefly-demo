@@ -1,6 +1,7 @@
 package com.firefly.demo.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,9 +13,26 @@ import java.io.Serializable;
 public class Book implements Serializable {
 
     Integer id;
-    String name;
+    String title;
     String author;
-    float price;
+    String publisher;
+    Date publication;
+    Float price;
+    Float discount;
+
+    public Book() {
+    }
+
+    public Book(Integer id, String title, String author, String publisher,
+                Date publication, Float price, Float discount) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+        this.publication = publication;
+        this.price = price;
+        this.discount = discount;
+    }
 
     public Integer getId() {
         return id;
@@ -24,12 +42,12 @@ public class Book implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthor() {
@@ -40,11 +58,35 @@ public class Book implements Serializable {
         this.author = author;
     }
 
-    public float getPrice() {
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public Date getPublication() {
+        return publication;
+    }
+
+    public void setPublication(Date publication) {
+        this.publication = publication;
+    }
+
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public Float getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Float discount) {
+        this.discount = discount;
     }
 }

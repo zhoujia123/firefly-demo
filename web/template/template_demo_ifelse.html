@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> template demo ifelse</title>
+</head>
+<body>
+<div>
+    <!-- #if ${login} -->
+    Welcome ${user.name}
+    <!-- #else -->
+    can not access
+    <!-- #end -->
+</div>
+
+<hr/>
+<h3>${user.name}打印model对象属性的值</h3>
+<!-- #if ${user.age} > 15 + 3 -->
+<div>${user.name}'s age more than 18</div>
+<!-- #end -->
+
+<!-- #if 15*2<=${user.age}  -->
+<div>${user.name}'s age less then 30</div>
+<!-- #end -->
+
+
+<hr/>
+<div>${testFunction(3, "hello", user.age)}</div>
+<div>${testFunction2()}</div>
+
+
+
+<h3>条件表达式语法和java语法一样，支持多条件和括号等</h3>
+<div>
+    <!-- #if "Pengtao Qiu" == ${user.name} -->
+    master come
+    <!-- #elseif ${user.name} == "Bob" -->
+    joke come
+    <!-- #elseif ${user.name} == "Jim" -->
+    Jim come
+    <!-- #else -->
+    small potato come
+    <!-- #end -->
+</div>
+
+
+</body>
+</html>
